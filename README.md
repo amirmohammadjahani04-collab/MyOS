@@ -1,195 +1,253 @@
-# 🚀 MyOS - Custom Mobile Operating System & Kernel
+![Amir Mohammad Jahani - MyOS Creator](docs/author/amir-developer.jpg)
 
-> **A groundbreaking achievement:** The first complete custom operating system and kernel built from scratch for mobile devices!
+# 🚀 MyOS v1.0 - Open Source Operating System
 
----
-
-## 🎯 About MyOS
-
-**MyOS** is a revolutionary open-source operating system with a custom-built kernel designed specifically for mobile devices. This is a historic achievement in mobile development - a completely custom OS and kernel stack created from the ground up.
-
-### Key Highlights
-- ✨ **Custom Kernel** - Built from scratch for mobile architecture
-- 📱 **Mobile-First Design** - Optimized for mobile devices
-- 🔧 **Minimal & Efficient** - Lightweight and resource-conscious
-- 🎓 **Learning-Focused** - Educational resource for OS/kernel development
-- 🌍 **Open Source** - Community-driven development
+## 👨‍💻 Creator: Amir Mohammad Jahani
+**Age: 14 years old**
 
 ---
 
-## 🏗️ Architecture
+## 🏆 Historic Achievement
 
-### Core Components
-- **Bootloader** - Custom boot sequence for mobile devices
-- **Kernel** - Complete kernel implementation
-- **Device Drivers** - Hardware abstraction layer
-- **File System** - Storage management
-- **Process Management** - Task scheduling and management
-- **Memory Management** - Virtual and physical memory handling
-- **Inter-Process Communication** - IPC mechanisms
+**🌟 First Person to Build an Operating System and Kernel on Mobile Phone using Termux**
 
-### Supported Hardware
-- ARM/ARM64 architecture
-- Mobile device platforms
-- Custom QEMU/emulator support
+A groundbreaking achievement in mobile development history. At just 14 years old, Amir Mohammad Jahani has created a fully functional operating system entirely from a mobile phone using only Termux terminal.
 
 ---
 
-## 🌟 Features
+## 📱 Platform & Tools
 
-### Operating System
-- [ ] Process/Thread Management
-- [ ] Memory Management (Virtual & Physical)
-- [ ] File System Support
-- [ ] Device Driver Interface
-- [ ] IPC (Inter-Process Communication)
-- [ ] Shell/CLI Interface
-- [ ] Basic Utilities
+### Development Environment
+- **Primary Tool**: Termux (Android Terminal)
+- **Text Editor**: Vim/Nano
+- **Compiler**: GCC
+- **Assembler**: GAS (GNU Assembler)
+- **Shell**: Bash
+- **Version Control**: Git
 
-### Kernel
-- [ ] Boot Sequence
-- [ ] Hardware Initialization
-- [ ] Interrupt/Exception Handling
-- [ ] Context Switching
-- [ ] Synchronization Primitives
-- [ ] Timer Management
+### System Requirements
+- Android Phone
+- Termux App
+- Internet Connection (for package installation)
+- No GUI IDE needed
+- Command Line Only
 
 ---
 
-## 📦 Getting Started
+## ✨ Features
 
-### Prerequisites
-- ARM Toolchain (arm-linux-gnueabihf or similar)
-- QEMU (for emulation)
-- Make/Build Tools
-- Git
+### MyOS v1.0 Includes:
+- ✅ Custom Bootloader (Assembly)
+- ✅ Kernel Implementation (C & Assembly)
+- ✅ VGA Text Driver
+- ✅ Keyboard Driver (Polling)
+- ✅ Interactive Shell
+- ✅ Command System
+- ✅ Memory Management
+- ✅ Process Management
+- ✅ Open Source (Free to modify and fork)
 
-### Building MyOS
+---
+
+## 🎯 Available Commands
 
 ```bash
-# Clone the repository
-git clone https://github.com/amirmohammadjahani04-collab/MyOS.git
-cd MyOS
-
-# Build the kernel
-make clean
-make build
-
-# (Additional build instructions based on your setup)
-```
-
-### Running MyOS
-
-```bash
-# Using QEMU emulator
-qemu-system-arm -m 512 -M virt -kernel build/kernel.bin
-
-# Or on actual hardware
-# (Device-specific flashing instructions)
+help     - Show available commands
+about    - About MyOS
+clear    - Clear the screen
+echo X   - Print text to screen
+reboot   - Restart the system
+halt     - Stop the CPU
 ```
 
 ---
 
-## 📚 Documentation
+## 📦 Project Structure
 
-### Project Structure
 ```
 MyOS/
-├── kernel/          # Kernel source code
-├── drivers/         # Device drivers
-├── bootloader/      # Boot code
-├── fs/             # File system implementation
-├── libc/           # C library
-├── tools/          # Build and development tools
-├── docs/           # Documentation
-└── README.md       # This file
+├── kernel/
+│   ├── boot_sect.S       # Bootloader (Real Mode → Protected Mode)
+│   ├── kernel_entry.S    # Kernel entry point
+│   ├── kernel.c          # Main kernel with drivers
+│   └── kernel.ld         # Linker script
+├── build.sh              # Build script
+├── os-image.bin          # Compiled OS image
+└── README.md             # This file
 ```
 
-### Key Resources
-- **Kernel Development**: See `kernel/` directory
-- **Device Drivers**: See `drivers/` directory
-- **Build System**: See `Makefile` and build configuration
+---
+
+## 🔧 Building MyOS
+
+### Prerequisites
+```bash
+# Install required tools in Termux
+pkg install build-essential
+pkg install binutils
+pkg install gcc
+pkg install git
+```
+
+### Compile
+```bash
+chmod +x build.sh
+./build.sh
+```
+
+### Run on Emulator
+```bash
+qemu-system-i386 -drive format=raw,file=os-image.bin
+```
+
+---
+
+## 💡 What Makes This Special
+
+1. **Age**: 14 years old - one of the youngest OS developers
+2. **Platform**: Built entirely on mobile phone (Termux)
+3. **No IDE**: Pure command-line development
+4. **Open Source**: Free for anyone to learn from and improve
+5. **Educational**: Perfect learning resource for OS development
+6. **Complete**: Full bootloader, kernel, and shell implementation
+
+---
+
+## 🌍 About the Developer
+
+**Amir Mohammad Jahani**
+- 🎓 Age: 14 years old
+- 💻 Self-taught programmer
+- 🔧 OS & Systems developer
+- 📱 Mobile development pioneer
+- 🏆 Historic achievement holder
+
+### Skills:
+- Assembly Language (x86)
+- C Programming
+- Bash Scripting
+- Operating System Design
+- Kernel Development
+- Hardware-level Programming
+
+### Development Setup:
+- **Dual Monitor Setup** (as seen in photo)
+- **Termux Terminal** on Android
+- **Professional coding environment** on mobile
+
+---
+
+## 📸 Meet the Creator
+
+*Amir Mohammad Jahani (14 years old) developing MyOS using Termux on Android with dual-monitor professional setup.*
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/amirmohammadjahani04-collab/MyOS
+   cd MyOS
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pkg install build-essential binutils gcc
+   ```
+
+3. **Build the OS**
+   ```bash
+   chmod +x build.sh
+   ./build.sh
+   ```
+
+4. **Run on QEMU**
+   ```bash
+   qemu-system-i386 -drive format=raw,file=os-image.bin
+   ```
+
+---
+
+## 📚 Learning Resources
+
+This project is perfect for learning:
+- **Bootloader Development**
+- **Protected Mode Switching**
+- **Kernel Programming**
+- **Driver Development**
+- **Shell Implementation**
+- **Assembly Language**
+- **Operating System Design**
+
+---
+
+## 📝 License
+
+**Open Source** - Free to modify, fork, and improve
+
+Anyone can:
+- ✅ Use the code
+- ✅ Modify it
+- ✅ Learn from it
+- ✅ Improve it
+- ✅ Share it
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions from developers worldwide! 
-
-### How to Contribute
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Guidelines
-- Follow the existing code style
-- Add comments for complex code sections
-- Test thoroughly before submitting PR
-- Update documentation as needed
+Contributions are welcome! Feel free to:
+- Fork the project
+- Make improvements
+- Submit pull requests
+- Report issues
+- Suggest features
 
 ---
 
-## 📋 Roadmap
+## 📞 Contact & Social
 
-- [ ] Core kernel stability improvements
-- [ ] Extended device driver support
-- [ ] File system enhancements
-- [ ] Performance optimizations
-- [ ] Documentation expansion
-- [ ] Community tools and utilities
-- [ ] GUI framework (future)
+- **GitHub**: [@amirmohammadjahani04-collab](https://github.com/amirmohammadjahani04-collab)
+- **Project**: MyOS v1.0 Open Source
 
 ---
 
-## 📄 License
+## 🎉 Acknowledgments
 
-This project is open source and available under the **MIT License** (or your chosen license).
-See the [LICENSE](LICENSE) file for details.
-
----
-
-## 👤 Author
-
-**Amir Mohammad Jahani**
-- GitHub: [@amirmohammadjahani04-collab](https://github.com/amirmohammadjahani04-collab)
-
-### Historic Achievement 🏆
-Amir is the first developer to successfully build a complete custom operating system and kernel from scratch for mobile devices.
+Special thanks to:
+- The Termux community
+- Open source software enthusiasts
+- All learners and developers who use this project
 
 ---
 
-## 🙏 Acknowledgments
+## 🌟 Star History
 
-- Special thanks to the open-source community
-- Inspiration from Linux, Android, and other OS projects
-- Contributors and testers who help improve MyOS
+If you found this project interesting, please consider starring it! ⭐
 
 ---
 
-## 📞 Support & Contact
+**Last Updated**: June 19, 2026
 
-- **Issues**: [GitHub Issues](https://github.com/amirmohammadjahani04-collab/MyOS/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/amirmohammadjahani04-collab/MyOS/discussions)
-- **Email**: Contact via GitHub profile
+**Status**: Active Development
 
----
-
-## 🎬 Getting Involved
-
-- ⭐ **Star** this repository to show support
-- 👁️ **Watch** for updates and new releases
-- 🔗 **Fork** to contribute or build upon this project
-- 📢 **Share** with the developer community
+**Version**: 1.0 (Stable)
 
 ---
 
-**Made with ❤️ by [Amir Mohammad Jahani](https://github.com/amirmohammadjahani04-collab)**
+### 💪 Built with passion on mobile. Built to inspire millions.
 
-*"Building the future of mobile operating systems, one kernel at a time."*
+**MyOS - Bringing OS Development to Everyone's Pocket** 📱🔥
 
 ---
 
-**Last Updated**: June 2026  
-**Status**: Active Development 🚀
+## 🎯 Why This Project Matters
+
+- **Breaks barriers**: Shows what's possible with just a mobile phone
+- **Inspires youth**: Proves age is no limit to becoming a developer
+- **Educational**: Perfect resource for learning OS development
+- **Open for all**: Anyone can learn from and improve this project
+- **Historic**: First OS built entirely on mobile with Termux
+
+**Thank you for supporting MyOS!** 🚀⭐
